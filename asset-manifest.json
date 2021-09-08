@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/focus-react/static/css/main.b6be0f0a.chunk.css",
-    "main.js": "/focus-react/static/js/main.47ab07a2.chunk.js",
-    "main.js.map": "/focus-react/static/js/main.47ab07a2.chunk.js.map",
+    "main.css": "/focus-react/static/css/main.c9a56412.chunk.css",
+    "main.js": "/focus-react/static/js/main.eaacea60.chunk.js",
+    "main.js.map": "/focus-react/static/js/main.eaacea60.chunk.js.map",
     "runtime-main.js": "/focus-react/static/js/runtime-main.7d4e3066.js",
     "runtime-main.js.map": "/focus-react/static/js/runtime-main.7d4e3066.js.map",
     "static/js/2.c4bed0c4.chunk.js": "/focus-react/static/js/2.c4bed0c4.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.c8b97a9e.chunk.js": "/focus-react/static/js/3.c8b97a9e.chunk.js",
     "static/js/3.c8b97a9e.chunk.js.map": "/focus-react/static/js/3.c8b97a9e.chunk.js.map",
     "index.html": "/focus-react/index.html",
-    "static/css/main.b6be0f0a.chunk.css.map": "/focus-react/static/css/main.b6be0f0a.chunk.css.map",
+    "static/css/main.c9a56412.chunk.css.map": "/focus-react/static/css/main.c9a56412.chunk.css.map",
     "static/js/2.c4bed0c4.chunk.js.LICENSE.txt": "/focus-react/static/js/2.c4bed0c4.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/focus-react/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7d4e3066.js",
     "static/js/2.c4bed0c4.chunk.js",
-    "static/css/main.b6be0f0a.chunk.css",
-    "static/js/main.47ab07a2.chunk.js"
+    "static/css/main.c9a56412.chunk.css",
+    "static/js/main.eaacea60.chunk.js"
   ]
 }
