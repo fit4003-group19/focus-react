@@ -16,65 +16,69 @@
             [data-layer="txt"] {
                 font: bold 36px Arial;
                 letter-spacing: 0.02em;
+                fill: white;
+                paint-order: stroke;
+                stroke: #000000;
+                stroke-width: 7px;
+                stroke-linecap: butt;
+                stroke-linejoin: bevel;
             }
-
-
 
             /* Color Controller */
             .color-1 [data-layer="bg"]{
                 fill: #FFB000;
             }
 
-            .color-1 [data-layer="txt"]{
+            <!-- .color-1 [data-layer="txt"]{
                 fill: white;
-            }
+            } -->
 
             .color-2 [data-layer="bg"]{
                 fill: #785EF0;
             }
 
-            .color-2 [data-layer="txt"]{
+            <!-- .color-2 [data-layer="txt"]{
                 fill: white;
-            }
+            } -->
 
             .color-3 [data-layer="bg"]{
                 fill: #648FFF;
             }
 
-            .color-3 [data-layer="txt"]{
+            <!-- .color-3 [data-layer="txt"]{
                 fill: white;
-            }
+            } -->
 
             .color-4 [data-layer="bg"]{
                 fill: #DC267F;
             }
 
-            .color-4 [data-layer="txt"]{
+            <!-- .color-4 [data-layer="txt"]{
+                fill: white;
+            } -->
+
+            <!-- .color-inactive [data-layer="txt"]{
+                fill: white;
+            } -->
+            
+            [data-layer-state="-1"] [data-layer="bg"] {
                 fill: white;
             }
 
-            .color-inactive [data-layer="bg"]{
+            [data-layer-state="0"] [data-layer="bg"] {
                 fill: #767676;
             }
 
-            .color-inactive [data-layer="txt"]{
-                fill: white;
-            }
-
-            .color-unlisted [data-layer="bg"]{
-                fill: white;
-            }
-
-            .color-unlisted [data-layer="txt"]{
+            <!-- .color-unlisted [data-layer="txt"]{
                 fill: black;
-            }
+            } -->
 
             [data-layer="root"]:focus [data-layer="bg"] {
                 fill: #FE6100;
             }
 
             [data-layer="root"]:focus [data-layer="txt"] {
-                fill: black;
+
             }
 
             /* Focus Controller */
@@ -95,27 +99,27 @@
             Unlisted Layers => tabindex=3
         -->
         <g id="focus-test">
-            <g id="room-6" tabindex="1" data-layer-mask=""  data-layer="root" class="color-1">
+            <g id="room-6" tabindex="0" data-layer-mask=""  data-layer="root" class="color-1" data-layer-state="1">
                 <path id="Vector" d="M668 4H851V187H668V4Z" data-layer="bg"/>
                 <text id="Room 6" data-layer="txt"><tspan x="692" y="106.98" >Room 6</tspan></text>
             </g>
-            <g id="room-1" tabindex="1" data-layer-mask="" data-layer="root" class="color-2">
+            <g id="room-1" tabindex="0" data-layer-mask="" data-layer="root" class="color-2" data-layer-state="1">
                 <path id="Vector_6" d="M4 4H187V187H4V4Z" fill="#785EF0" data-layer="bg"/>
                 <text id="Room 1" data-layer="txt"><tspan x="29" y="106.98" >Room 1</tspan></text>
             </g>
-            <g id="room-3" tabindex="1" data-layer-mask="" data-layer="root" class="color-3">
+            <g id="room-3" tabindex="0" data-layer-mask="" data-layer="root" class="color-3" data-layer-state="1">
                 <path id="Vector_4" d="M225 4H408V187H225V4Z" data-layer="bg"/>
                 <text id="Room 3" data-layer="txt"><tspan x="249" y="106.98" >Room 3</tspan></text>
             </g>
-            <g id="room-2" tabindex="1" data-layer-mask="" data-layer="root" class="color-4">
+            <g id="room-2" tabindex="0" data-layer-mask="" data-layer="root" class="color-4" data-layer-state="1">
                 <path id="Vector_5" d="M4 225H408V408H4V225Z" data-layer="bg"/>
                 <text id="Room 2" data-layer="txt"><tspan x="151" y="327.98" >Room 2</tspan></text>
             </g>
-            <g id="room-5" tabindex="2" data-layer-mask="" data-layer="root" class="color-inactive">
+            <g id="room-5" tabindex="0" data-layer-mask="" data-layer="root" class="color-1" data-layer-state="0">
                 <path id="Vector_2" d="M668 222H851V405H668V222Z" data-layer="bg"/>
                 <text id="Room 5" data-layer="txt"><tspan x="692" y="324.98" >Room 5</tspan></text>
             </g>
-            <g id="room-4" tabindex="3" data-layer-mask="" data-layer="root" class="color-unlisted">
+            <g id="room-4" tabindex="0" data-layer-mask="" data-layer="root" data-layer-state="-1">
                 <path id="Vector_3" d="M447 4H630V408H447V4Z" data-layer="bg"/>
                 <text id="Room 4" data-layer="txt"><tspan x="467" y="217.98" >Room 4</tspan></text>
             </g>

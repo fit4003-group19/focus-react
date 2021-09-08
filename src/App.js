@@ -22,7 +22,8 @@ function App() {
 
   const originalFontMap = {
     'font-size': 36,
-    'font-family': 'Arial'
+    'font-family': 'Arial',
+    'letter-spacing': '0.05'
   }
 
   const availableFonts = [
@@ -63,6 +64,10 @@ function App() {
         map['& [data-layer="root"]:focus [data-layer="bg"]'] = {
           fill: colors[key]
         }
+      } else if (key == "color-inactive") {
+        map['& [data-layer-state="0"] [data-layer="bg"]'] = {
+          fill: colors[key]
+        }
       // Handler For When A Generic Color Is Encountered
       } else if (key.startsWith('color')) {
         map[`& .${key} [data-layer='bg']`] = {
@@ -89,8 +94,10 @@ function App() {
     let map = {}
     let fontSize = fonts['font-size'];
     let fontFamily = fonts['font-family']
+    let letterSpacing = fonts['letter-spacing']
     map['& [data-layer="txt"]'] = {
-      font: `bold ${fontSize}px ${fontFamily}`
+      font: `bold ${fontSize}px ${fontFamily}`,
+      letterSpacing: letterSpacing+'em'
     }
     return map
   }
@@ -154,7 +161,7 @@ function App() {
                   return (
                     <label key={index}>
                         {key}
-                        <input type="color" value={colors[key]} onChange={(e)=>onColorChange(e,key)}></input>
+                        <input type="color" defaultValue={colors[key]} onChange={(e)=>onColorChange(e,key)}></input>
                     </label>
                   )
                 }
@@ -202,7 +209,13 @@ function App() {
                       </select>
                     </label>
                   )
-
+                } else if (key=="letter-spacing") {
+                  return (
+                    <label key={index}>
+                        {key + " (em)"}
+                        <input type="number" step="0.01" value={fonts[key]} onChange={(e)=>onFontChange(e,key)}></input>
+                    </label>
+                  )
                 }
               })
             }
