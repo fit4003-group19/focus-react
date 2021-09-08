@@ -7,22 +7,18 @@
             */
 
             /* Stroke Controller */
-            .stroke [data-layer="bg"] {
+            [data-layer="bg"] {
                 stroke: black;
                 stroke-width: 8;
             }
 
             /* Font Controller */
-            .font [data-layer="txt"] {
+            [data-layer="txt"] {
                 font: bold 36px Arial;
                 letter-spacing: 0.02em;
             }
 
-            @keyframes flash-fill {
-                50% {
-                    fill: white;
-                }
-            }
+
 
             /* Color Controller */
             .color-1 [data-layer="bg"]{
@@ -73,16 +69,24 @@
                 fill: black;
             }
 
-            /* Focus Controller */
             [data-layer="root"]:focus [data-layer="bg"] {
                 fill: #FE6100;
-                animation: flash-fill 3s infinite;
             }
 
             [data-layer="root"]:focus [data-layer="txt"] {
                 fill: black;
             }
 
+            /* Focus Controller */
+            [data-layer="root"]:focus [data-layer="bg"] {
+                animation: focus-flash 3s infinite;
+            }
+
+            @keyframes focus-flash {
+                50% {
+                    fill: white;
+                }
+            }
         </style>
         <!-- 
             The chronological order of tabbing for layers can be manipulated via tab index values
@@ -90,7 +94,7 @@
             Inactive Layers => tabindex=2
             Unlisted Layers => tabindex=3
         -->
-        <g id="focus-test" class="stroke font">
+        <g id="focus-test">
             <g id="room-6" tabindex="1" data-layer-mask=""  data-layer="root" class="color-1">
                 <path id="Vector" d="M668 4H851V187H668V4Z" data-layer="bg"/>
                 <text id="Room 6" data-layer="txt"><tspan x="692" y="106.98" >Room 6</tspan></text>
