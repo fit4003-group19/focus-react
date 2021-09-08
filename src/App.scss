@@ -6,19 +6,15 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  .colors {
-
-    flex: 1 1
+  & > * {
+    flex-basis: auto;
   }
 
-  .color {
-    display: block;
 
-    input {
-      margin-left: 1rem;
-    }
-  }
 }
 
 svg {
