@@ -1,0 +1,28 @@
+.App {
+  margin-top: 2rem;
+}
+.container {
+  max-width: 100rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+
+  .colors {
+
+    flex: 1 1
+  }
+
+  .color {
+    display: block;
+
+    input {
+      margin-left: 1rem;
+    }
+  }
+}
+
+svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
