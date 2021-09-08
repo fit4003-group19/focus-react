@@ -23,7 +23,7 @@ function App() {
   const originalFontMap = {
     'font-size': 36,
     'font-family': 'Arial',
-    'letter-spacing': '0.05'
+    'letter-spacing': '0.02'
   }
 
   const availableFonts = [
@@ -144,6 +144,7 @@ function App() {
 
   return (
     <div className="App">
+        <h1 className="title">Adaptive SVG</h1>
         <StyledContainer>
           <SVG 
             innerRef={svgRef}
