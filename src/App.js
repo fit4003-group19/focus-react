@@ -162,7 +162,7 @@ function App() {
                   return (
                     <label key={index}>
                         {key}
-                        <input type="color" defaultValue={colors[key]} onChange={(e)=>onColorChange(e,key)}></input>
+                        <input type="color" value={colors[key]} onChange={(e)=>onColorChange(e,key)}></input>
                     </label>
                   )
                 }
